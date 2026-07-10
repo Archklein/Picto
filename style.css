@@ -55,6 +55,8 @@ body {
 
 .nav_icons_wrapper a {
   color: black;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .nav_icon {
