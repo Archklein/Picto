@@ -1,6 +1,6 @@
 :root {
   --dominant: #f5f5f5;
-  --secondary: #1b1a1a;
+  --secondary: #292524;
   --accent: #646464;
 }
 
@@ -194,7 +194,7 @@ body {
   font-weight: 200;
   font-style: normal;
   font-size: clamp(4rem, 4vw, 11rem);
-  color: #7c7c7c60;
+  color: #292524;
   width: 100%;
   border-bottom: 1px solid black;
   /* margin-bottom: clamp(3rem, 4vh, 4rem); */
