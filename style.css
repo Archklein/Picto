@@ -33,7 +33,7 @@ body {
   width: 100%;
   position: fixed;
   top: 0%;
-  border-bottom: 1px solid var(--bg-text-light);
+  /* border-bottom: 1px solid var(--bg-text-light); */
 
   .nav_top_wrapper {
     padding: 0.3rem;
@@ -72,8 +72,8 @@ body {
 
 .account_section .account {
   padding: 0.4rem;
-  height: clamp(1.2rem, 4vh + 1rem, 4rem);
-  width: clamp(1.2rem, 4vh + 1rem, 4rem);
+  height: clamp(1.2rem, 4vh + 1rem, 2rem);
+  width: clamp(1.2rem, 4vh + 1rem, 2rem);
   text-decoration: none;
   background-color: var(--bg-accent);
   border-radius: 50%;
