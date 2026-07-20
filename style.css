@@ -10,243 +10,85 @@ html {
 }
 
 :root {
-  --bg-main: #faf9f6;
-  --bg-text-dark: #121212;
-  --bg-text-light: #a0a0a0;
-  --bg-accent: #f0f8ff;
+  --bg-main: #fff;
+  --bg-text-dark: #1d1d1f;
+  --bg-text-light: #ffda75;
+  --bg-accent: #ffb120;
 }
 
 body {
   width: 100%;
-  border-style: 100%;
   position: relative;
+  background-color: var(--bg-main);
 }
 
 .nav_top {
   user-select: none;
   -webkit-user-select: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: auto;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  position: sticky;
-  top: 0;
   z-index: 999;
   background-color: var(--bg-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: fixed;
+  top: 0%;
+  border-bottom: 1px solid var(--bg-text-light);
 
   .nav_top_wrapper {
+    padding: 0.3rem;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: auto;
-    margin-right: clamp(3px, 4vw, 5px);
-    margin-left: clamp(10px, 4vw, 15px);
+    gap: 15px;
+    padding-left: clamp(15px, 4vw + 1rem, 20px);
+    padding-right: clamp(15px, 4vw + 1rem, 20px);
 
-    .nav_top_content {
-      padding: 0.3rem;
-      border-radius: 0.3rem;
-    }
+    .logo {
+      height: 50px;
+      margin: 0 auto 0 auto;
 
-    .logo_wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-right: auto;
-
-      .logo {
-        width: 100%;
-        height: clamp(4rem, 4vw + 1rem, 12rem);
-
-        img {
-          height: 100%;
-        }
+      img {
+        height: 100%;
       }
     }
+
+    .nt_content {
+      transition: all 0.3s ease;
+    }
+
+    .nt_content:hover {
+      transform: translateY(-10%);
+    }
   }
 }
 
-#menu {
-  background-color: var(--bg-text-dark);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  border: none;
-  transition: all 0.3s ease;
-}
-
-#menu:hover {
-  transform: translateY(-5%);
-  box-shadow:
-    0px 2px 2px rgba(0, 0, 0, 0.986),
-    inset 1px 1px 2.5px rgba(245, 243, 243, 0.651),
-    inset -1px -1px 2.5px rgba(50, 212, 50, 0.651);
-}
-
-#notification:hover {
-  transform: translateY(-5%);
-  box-shadow:
-    0px 2px 2px rgba(0, 0, 0, 0.329),
-    inset 1px 1px 2.5px rgba(204, 204, 204, 0.2),
-    inset -1px -1px 2.5px rgba(50, 212, 50, 0.336);
-}
-
-#menu_icon {
-  color: var(--bg-main);
-}
-
-#notification {
-  border: none;
-  background-color: white;
-  box-shadow:
-    1px 1px 2px rgba(0, 0, 0, 0.2),
-    inset -1px -1px 2px rgba(177, 177, 177, 0.2),
-    -1px -1px 2px rgba(255, 253, 253, 0.808);
-  transition: all 0.3s ease;
-}
-
-.hero_section {
-  width: 100%;
+.account_section {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  .hero_section_wrapper {
-    margin-right: clamp(20px, 4vw, 25px);
-    margin-left: clamp(20px, 4vw, 25px);
-    margin-top: clamp(10px, 4vw, 15px);
-  }
-
-  .hero_contents {
-    width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
-    user-select: none;
-    -webkit-user-select: none;
-  }
 }
 
-.hero_contents h1 {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  font-size: clamp(4rem, 4vw + 1rem, 12rem);
-  margin-bottom: clamp(10px, 4vw, 15px);
-}
-
-.hero_contents p {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-size: clamp(0.7rem, 4vw + 1rem, 1rem);
-  padding-bottom: clamp(10px, 4vw, 15px);
-  color: var(--bg-text-light);
-}
-
-.PCT_img_container {
-  width: 100%;
+.account_section .account {
+  padding: 0.4rem;
+  height: clamp(1.2rem, 4vh + 1rem, 4rem);
+  width: clamp(1.2rem, 4vh + 1rem, 4rem);
+  text-decoration: none;
+  background-color: var(--bg-accent);
+  border-radius: 50%;
+  border-bottom: 1px solid var(--bg-text-light);
+  box-shadow:
+    1px 1px 2px rgba(143, 118, 7, 0.1),
+    inset 1px 1px 2px rgba(167, 52, 52, 0.2),
+    inset -1px -1px 2px rgba(128, 91, 36, 0.2);
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: clamp(10px, 4vw, 15px);
-
-  .PCT_img_wrapper {
-    margin-right: clamp(20px, 4vw, 25px);
-    margin-left: clamp(20px, 4vw, 25px);
-    margin-top: clamp(10px, 4vw, 15px);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  color: var(--bg-text-dark);
 }
 
-.PCT_img {
-  height: clamp(11rem, 4vw + 1rem, 12rem);
-  position: relative;
-  overflow: hidden;
-  border-radius: 5px;
-
-  img {
-    height: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    border-right: 1px solid rgba(0, 0, 0, 0.3);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-  }
-}
-
-.PCT_img::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(19, 41, 7, 0.911),
-    rgba(2, 2, 2, 0)
-  );
-  left: 0;
-  pointer-events: none;
-  bottom: 0%;
-}
-
-.PCT_img_contents {
-  position: absolute;
-  bottom: 4%;
-  left: 4%;
-  color: white;
-  width: 100%;
-  z-index: 2;
-
-  button {
-    padding: 0.4rem 0.4rem 0.4rem 0.4rem;
-    margin-top: 5px;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    outline: none;
-    border-radius: 5px;
-    border: none;
-    box-shadow:
-      1px 1px 2px rgba(0, 0, 0, 0.411),
-      inset -1px -1px 2px rgba(177, 177, 177, 0.2),
-      -1px -1px 2px rgba(255, 253, 253, 0.808);
-    transition: all 0.3s ease;
-    background: linear-gradient(
-      to right,
-      rgba(134, 101, 8, 0.685),
-      rgba(238, 187, 48, 0.5)
-    );
-    color: var(--bg-main);
-    transition: all 0.3s ease;
-  }
-}
-
-#PCT_img_btn:hover {
-  transform: translateY(-5%);
-  box-shadow:
-    0px 2px 2px rgba(0, 0, 0, 0.541),
-    inset 1px 1px 2.5px rgba(238, 236, 236, 0.2),
-    inset -1px -1px 2.5px rgba(190, 226, 190, 0.336);
-}
-
-.PCT_img_contents h2 {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  width: 50%;
-}
-
-.PCT_img_contents p {
-  font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  width: 50%;
-  font-size: clamp(0.7rem, 4vw + 0.2rem, 0.8rem);
-  color: #dfdfdf;
+#acc_icon {
+  font-size: clamp(1rem, 4vw + 1rem, 1.2rem);
 }
