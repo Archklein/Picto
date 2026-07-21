@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=add"
+    />
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <script
       src="https://kit.fontawesome.com/771fd4cddf.js"
       crossorigin="anonymous"
@@ -23,10 +28,32 @@
   </head>
   <body>
     <nav class="nav_top">
-      <div class="nav_top_wrapper">
-        <div class="nt_content">
-          <i class="fa-solid fa-bars"></i>
+      <!-- <input type="checkbox" name="" id="menu_toggle" class="menu_trigger" />
+      <div class="nt_content">
+        <label for="menu_toggle"> <i class="fa-solid fa-bars"></i></label>
+
+        <div class="menu_list">
+          <a href="#"><i class="fa-solid fa-plus"></i>Sell Item</a>
+          <a href="#"><i class="fa-solid fa-box-open"></i>Manage Item</a>
+          <a href="#"><i class="fa-solid fa-comment-dots"></i>Message</a>
+          <a href="#"><i class="fa-solid fa-heart"></i>Saved Item</a>
         </div>
+      </div> -->
+
+      <div class="nav_top_wrapper">
+        <input type="checkbox" name="" id="menu_toggle" />
+        <label for="menu_toggle"
+          ><i id="menu_icon" class="fa-solid fa-bars"></i
+        ></label>
+        <label for="menu_toggle" class="overlay"></label>
+
+        <div class="menu_list">
+          <a href="#"><i class="fa-solid fa-plus"></i>Sell Item</a>
+          <a href="#"><i class="fa-solid fa-box-open"></i>Manage Item</a>
+          <a href="#"><i class="fa-solid fa-comment-dots"></i>Message</a>
+          <a href="#"><i class="fa-solid fa-heart"></i>Saved Item</a>
+        </div>
+
         <div class="nt_content">
           <i class="fa-brands fa-sistrix"></i>
         </div>
@@ -41,8 +68,15 @@
 
         <div class="account_section">
           <a href="#" class="account">
-            <i id="acc_icon" class="fa-regular fa-circle-user"></i
-          ></a>
+            <lord-icon
+              id="acc_icon"
+              src="https://cdn.lordicon.com/bushiqea.json"
+              trigger="morph"
+              state="morph-select"
+              style="width: 250px; height: 250px"
+            >
+            </lord-icon>
+          </a>
         </div>
       </div>
     </nav>
