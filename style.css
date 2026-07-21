@@ -201,6 +201,38 @@ body {
   z-index: 997;
 }
 
+.cancel_btn_wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1px;
+
+  .cancel_btn {
+    position: absolute;
+    top: 2000%;
+    background-color: var(--bg-accent);
+    padding: 0.3rem;
+    border-radius: 15px;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in;
+    transform: translateY(0);
+
+    svg {
+      font-size: clamp(1.3rem, 4wv + 1rem, 1.5rem);
+    }
+  }
+}
+
+.cancel_btn:hover {
+  transform: translateY(-5%);
+  box-shadow: 0px 1px 2px rgb(167, 69, 4);
+}
+
 #menu_toggle:checked ~ .menu_list {
   transform: translateY(0%);
 }
